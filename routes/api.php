@@ -39,7 +39,7 @@ Route::GET('ListeUser',[UserController::class,'touslesUtilisateurs']);
 Route::GET('indexUser',[UserController::class,'index']);
 
 
-Route::POST('registerAdmin',[AdminController::class,'registerAdmin']);
+// Route::POST('registerAdmin',[AdminController::class,'registerAdmin']);
 Route::POST('loginAdmin',[AdminController::class,'loginAdmin']);
 Route::POST('logoutAdmin',[AdminController::class,'logoutAdmin']);
 Route::GET('indexAdmin',[AdminController::class,'index']);
