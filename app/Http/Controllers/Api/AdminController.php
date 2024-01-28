@@ -102,7 +102,8 @@ class AdminController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the f
+     * orm for editing the specified resource.
   */
 
     public function AccepteDemandeTontine(Tontine $tontines)
