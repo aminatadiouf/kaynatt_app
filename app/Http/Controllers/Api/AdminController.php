@@ -17,7 +17,6 @@ class AdminController extends Controller
 {
 
 
-<<<<<<< HEAD
     // public function registerAdmin(AdminCreateRequest $request)
     // {
         
@@ -42,32 +41,6 @@ class AdminController extends Controller
     //        return response()->json($e);
     //     } 
     // }
-=======
-    public function registerAdmin(AdminCreateRequest $request)
-    {
-        
-       
-        try {
-      
-      
-            $admins = new Admin();
-
-            $admins->name_admin = $request->name_admin;
-            $admins->email_admin = $request->email_admin;
-            $admins->password = Hash::make($request->password);
-
-            $admins->save();
-       
-            return response()->json([
-                'status_code'=>200,
-                'status_message'=>'vous vous êtes inscrits en tant que admin',
-                'data'=>$admins
-            ]);
-        } catch (Exception $e) {
-           return response()->json($e);
-        } 
-    }
->>>>>>> develop
 
 
     public function loginAdmin(Request $request)
