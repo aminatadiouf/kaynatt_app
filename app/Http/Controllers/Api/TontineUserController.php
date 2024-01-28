@@ -116,17 +116,17 @@ class TontineUserController extends Controller
 
 
 
-    public function attachCreateur(UserTontineCreateRequest $request, Tontine $tontines,User $users)
-    {
-        $tontine = Tontine::find($tontines);
-        if ($tontines->statut() === 'accepte' & $tontines->role() === 'createur_tontine')
-        {
-        $tontine->users()->attach($users);
-    }
-        return response()->json([
-            'status' => true,
-            'message' => 'Le createur est enregistré avec succès à la tontine']);
-    }
+    // public function attachCreateur(UserTontineCreateRequest $request, Tontine $tontines,User $users)
+    // {
+    //     $tontine = Tontine::find($tontines);
+    // if ($tontines->statut() === 'accepte' & $tontines->role() === 'createur_tontine')
+    // {
+    //     $tontine->users()->attach($users);
+    // }
+    //     return response()->json([
+    // 'status' => true,
+    // 'message' => 'Le createur est enregistré avec succès à la tontine']);
+    // }
 
     /**
      * Display the specified resource.
