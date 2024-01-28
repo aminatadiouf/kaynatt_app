@@ -17,30 +17,30 @@ class AdminController extends Controller
 {
 
 
-    public function registerAdmin(AdminCreateRequest $request)
-    {
+    // public function registerAdmin(AdminCreateRequest $request)
+    // {
         
        
-        try {
+    //     try {
       
       
-            $admins = new Admin();
+    //         $admins = new Admin();
 
-            $admins->name_admin = $request->name_admin;
-            $admins->email_admin = $request->email_admin;
-            $admins->password = Hash::make($request->password);
+    //         $admins->name_admin = $request->name_admin;
+    //         $admins->email_admin = $request->email_admin;
+    //         $admins->password = Hash::make($request->password);
 
-            $admins->save();
+    //         $admins->save();
        
-            return response()->json([
-                'status_code'=>200,
-                'status_message'=>'vous vous êtes inscrits en tant que admin',
-                'data'=>$admins
-            ]);
-        } catch (Exception $e) {
-           return response()->json($e);
-        } 
-    }
+    //         return response()->json([
+    //             'status_code'=>200,
+    //             'status_message'=>'vous vous êtes inscrits en tant que admin',
+    //             'data'=>$admins
+    //         ]);
+    //     } catch (Exception $e) {
+    //        return response()->json($e);
+    //     } 
+    // }
 
 
     public function loginAdmin(Request $request)
@@ -102,29 +102,9 @@ class AdminController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
-
+     * Show the f
+     * orm for editing the specified resource.
+  */
 
     public function AccepteDemandeTontine(Tontine $tontines)
 
